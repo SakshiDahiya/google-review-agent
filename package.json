@@ -1,0 +1,43 @@
+{
+  "name": "google-review-ai-assistant",
+  "version": "2.0.0",
+  "description": "Wizard-driven CLI to automate Google Business review replies with AI via Playwright",
+  "main": "dist/index.js",
+  "bin": {
+    "review-bot": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "postinstall": "playwright install chromium",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "google-reviews",
+    "cli",
+    "openai",
+    "automation",
+    "playwright"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "inquirer": "^8.2.6",
+    "openai": "^4.77.0",
+    "ora": "^5.4.1",
+    "playwright": "^1.49.1",
+    "winston": "^3.17.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.10",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
